@@ -1,0 +1,98 @@
+/* Center everything in the body */
+body {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Set flex container to column */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Center text within container */
+}
+
+/* Style the headings */
+header {
+    background-color: #3498db; /* Set background color to blue */
+    color: #fff; /* Set text color to white */
+    padding: 1em; /* Add padding to top and bottom of header */
+    width: 100%; /* Make header take up full width of container */
+    font-size: 70px; /* Set font size */
+    font-family: Georgia, sans-serif; /* Set font family */
+    font-weight: bold; /* Make text bold */
+    text-align: center; /* Center text within header */
+    box-sizing: border-box; /* Include padding and border in header width */
+}
+
+h1 {
+    margin: 10px 0; /* Add margin to top and bottom of h1 element */
+    font-size: 9em; /* Set font size */
+}
+
+h2, h3, h4, h5 {
+    margin: 1em 0; /* Add margin to top and bottom of h2-h5 elements */
+    font-size: 3em; /* Set font size */
+}
+
+/* Style the pet image */
+img {
+    display: block; /* Make image a block element */
+    margin: auto; /* Center image within its container */
+    max-width: 100%; /* Set maximum width to 100% of container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Style the pet stats and actions */
+ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 1em 0; /* Add margin to top and bottom of list */
+    font-size: 2em; /* Set font size */
+}
+
+li {
+    margin: 0.5em 0; /* Add margin to top and bottom of list items */
+    text-align: center; /* Center text within list items */
+}
+
+a {
+    display: inline-block; /* Make links inline-block elements */
+    padding: 0.5em 1em; /* Add padding to links */
+    background-color: #3498db; /* Set background color to blue */
+    color: #fff; /* Set text color to white */
+    border-radius: 3px; /* Add rounded corners to links */
+    text-decoration: none; /* Remove default underline */
+}
+
+a:hover {
+    background-color: #2980b9; /* Change background color on hover */
+}
+
+.dog-container {
+    position: fixed; /* Set position to fixed */
+    bottom: 0; /* Position at bottom of page */
+    width: 100%; /* Make container take up full width of page */
+    height: 100px; /* Set height */
+    overflow: hidden; /* Hide overflow */
+}
+
+.dog {
+    position: absolute; /* Set position to absolute */
+    bottom: 0; /* Position at bottom of container */
+    width: 114px; /* Set width */
+    height: 100px; /* Set height */
+    animation: run 10s linear infinite; /* Set animation to run infinitely */
+}
+
+/* This is a keyframe animation called "run" */
+@keyframes run {
+/* At 0%, the image is translated -100% to the left, making it completely hidden */
+0% {
+transform: translateX(-100%);
+}
+/* At 50%, the image is translated 0, bringing it to the center of the screen */
+50% {
+transform: translateX(0);
+}
+/* At 100%, the image is translated 100% to the right, making it completely hidden again */
+100% {
+    transform: translateX(100%);
+}
+}

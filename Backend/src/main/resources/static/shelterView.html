@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Shelter</title>
+
+    <link rel="stylesheet" href="css/shelterView.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<h1>Java Junkie Pet Shelter </h1>
+
+<div class="topnav">
+    <a href="/templates/petView.html">View Pets</a>
+</div>
+
+<img id="petImage" src="https://media.istockphoto.com/id/1411763501/photo/banner-head-pets-cat-and-dog-hiding-isolated-on-blue-pastel-background.jpg?b=1&s=170667a&w=0&k=20&c=NhPsKS2YepUhbOxThF4ks7YsQ3HMrvEKQ444wAfRCyw=">
+
+<!-- Add two separate tables for organic and robotic pets -->
+<div>
+    <h2>Organic Pets</h2>
+    <table class="petTable" id="organicPetsTable">
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Happiness</th>
+            <th>Hunger</th>
+            <th>Waste</th>
+            <th>Play</th>
+            <th>Feed and Water</th>
+            <th>Clean</th>
+            <th>Adopt</th>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <h2>Robotic Pets</h2>
+    <table class="petTable" id="roboticPetsTable">
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Happiness</th>
+            <th>Oil Level</th>
+            <th>Battery Life</th>
+            <th>Play</th>
+            <th>Recharge</th>
+            <th>Change Oil</th>
+            <th>Adopt</th>
+        </tr>
+    </table>
+</div>
+
+<!-- Add form for creating a custom pet -->
+<div class="create-custom-pet">
+    <h3>Create Custom Pet</h3>
+    <form id="customPetForm">
+        <label for="customPetType">Type:</label>
+        <select id="customPetType" name="customPetType" required>
+            <option value="Organic Dog">Organic Dog</option>
+            <option value="Organic Cat">Organic Cat</option>
+            <option value="Robotic Dog">Robotic Dog</option>
+            <option value="Robotic Cat">Robotic Cat</option>
+        </select>
+
+        <label for="customPetName">Name:</label>
+        <input type="text" id="customPetName" name="customPetName" required>
+
+        <button type="submit">Create Custom Pet</button>
+    </form>
+</div>
+
+<div class="generate-button">
+    <button id="generateRandomPet" type="button">Generate Random Pet</button>
+</div>
+
+<script src="js/petShelter.js"></script>
+
+</body>
+</html>

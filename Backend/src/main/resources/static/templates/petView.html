@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet View</title>
+    <!-- Include the external stylesheet -->
+    <link rel="stylesheet" href="/css/PetViewStyleSheet.css"></head>
+<body>
+<!-- Header section -->
+<header>Welcome to the Java Junkie Shelter!</header>
+
+<!-- Pet petName section -->
+<h1>Here is <span th:text="${petName}"></span></h1>
+
+<!-- Pet image section -->
+<h3>Look how cute this pet is!</h3>
+<img src="https://www.heart.org/-/media/Healthy-Living-Images/Healthy-Lifestyle/Pets/puppy-kitten-heart.jpg" alt="puppy">
+
+<!-- Pet stats section -->
+<h4>Here are <span th:text="${petName}"></span>'s stats</h4>
+<ul>
+    <!-- Pet hunger stat -->
+    <li>Hunger: <span th:text="${hunger}"></span></li>
+    <!-- Pet happiness stat -->
+    <li>Happiness: <span th:text="${happiness}"></span></li>
+    <!-- Pet energy stat -->
+    <li>Health: <span th:text="${health}"></span></li>
+    <!-- Pet waste stat -->
+    <li>Waste: <span th:text="${waste}"></span></li>
+</ul>
+
+<!-- Pet actions section -->
+<h5>Here are <span th:text="${petName}"></span>'s actions</h5>
+<ul>
+    <!-- Feed action -->
+    <li><a th:href="@{${'/feed/' + petName}}">Feed</a></li>
+    <!-- Play action -->
+    <li><a th:href="@{${'/play/' + petName}}">Play</a></li>
+    <!-- Clean action -->
+    <li><a th:href="@{${'/clean/' + petName}}">Clean</a></li>
+</ul>
+
+<!-- Adoption section -->
+<h5>Want to adopt?</h5>
+<ul>
+    <!-- Yes adoption option -->
+    <li><a th:href="@{/adopt/{petName}(id=${petName})}">Yes</a></li>
+    <!-- If no, then we will go back to the main page -->
+    <li><a href="shelterView.html">No</a></li>
+</ul>
+
+<!-- Dog image section -->
+<div class="dog-container">
+    <!-- Include the dog image -->
+    <img class="dog" src="https://media.tenor.com/YdsMwdIApe4AAAAM/running-dog.gif" alt="dog">
+</div>
+</body>
+</html>

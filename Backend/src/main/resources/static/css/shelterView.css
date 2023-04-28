@@ -1,0 +1,72 @@
+h1{
+    background-color: #6096B4;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Source Sans Pro';
+    border:2px solid #6096B4;
+}
+
+body{
+    background: #EEE9DA;
+}
+
+.topnav {
+    overflow:hidden;
+    color: white
+}
+.topnav a {
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    color: white;
+}
+.topnav {
+    background-color:#6096B4;
+    color: white;
+}
+
+.generate-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#petImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+  .cats-and-dogs{
+    position: relative;
+    top: 55%;
+    left: 43%;
+    width: 17%;
+    border: 2px;
+    text-align: center;
+  }
+
+
+.petTable {
+    background-color: #BDCDD6;
+    color: black;
+    width: 100%; /* Make the table take up the full width of its container */
+    margin-bottom: 1em; /* Add some space below the table */
+}
+
+.availablePetsTable{
+    position: center;
+    background-color: #BDCDD6;
+    color: black;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
